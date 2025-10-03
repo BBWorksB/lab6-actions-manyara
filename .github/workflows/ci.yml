@@ -35,6 +35,6 @@ jobs:
         env:
           PYTHONPATH: ${{ github.workspace }}
         run: |
-          python -m prediction_pipeline_demo.prediction_pipeline_demo
+          python prediction_pipeline_demo.py
       # The goal is to execute prediction_pipeline_demo.py so CI logs show the model’s R^2 score.
       # This ensures that the entire pipeline runs without errors.                                                                                                                                                                                  
