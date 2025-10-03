@@ -31,4 +31,10 @@ jobs:
           python -m pytest -q --cov=prediction_pipeline_demo --cov-report=term-missing --cov-fail-under=70
       
       # TODO: Add a step here to run the demo pipeline end-to-end
+      - name: Run demo pipeline -ML
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+        run: |
+          python -m prediction_pipeline_demo.prediction_pipeline_demo
       # The goal is to execute prediction_pipeline_demo.py so CI logs show the model’s R^2 score.
+      # This ensures that the entire pipeline runs without errors.                                                                                                                                                                                  
